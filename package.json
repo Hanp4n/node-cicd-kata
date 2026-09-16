@@ -2,7 +2,7 @@
   "name": "node-cicd-kata",
   "version": "0.1.0",
   "private": true,
-  "description": "Servicio TypeScript para practicar CI/CD con GitHub Actions, Docker Hub y Render",
+  "description": "Servicio TypeScript para practicar CI/CD con GitHub Actions y Docker Hub",
   "type": "module",
   "engines": {
     "node": ">=24"

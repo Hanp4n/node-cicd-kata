@@ -124,7 +124,7 @@ tipos y tests.
 
 ## Docker
 
-Construir y ejecutar la imagen:
+Cuando `npm run check` finalice correctamente, construir y ejecutar la imagen:
 
 ```bash
 docker build -t <usuario>/<servicio>:latest .
