@@ -1,0 +1,38 @@
+name: CI-pipeline
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+    
+jobs:
+    comprobar-calidad:
+        name: Comprobar Lint, Formato, tipos y tests
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkear el código
+              uses: actions/checkout@v4
+
+            - name: configurar node
+              uses: actions/setup-node@v4
+              with:
+                node-version: '20'
+                cache: 'npm'
+
+            - name: instalar dependencias
+              run: npm ci
+
+            - name: ejecutar lint
+              run: npm run lint
+
+            - name: ejecutar formato
+              run: npm format
+            
+            - name: ejecutar tipos
+              run: npm run types
+            
+            - name: ejecutar tests
+              run: npm test
+            - name: ejecutar build
+              run: npm run build
