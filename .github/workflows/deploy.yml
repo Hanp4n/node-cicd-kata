@@ -37,4 +37,3 @@ jobs:
           curl ${{ secrets.RENDER_DEPLOY_HOOK_URL }} \
             -X POST \
             -H "Content-Type: application/json"
-
